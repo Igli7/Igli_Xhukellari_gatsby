@@ -1,5 +1,17 @@
 import React from "react"
+import Header from "../components/Header"
+import Profile from "../components/Profile"
+import Layout from "../components/Layout"
 
-export default function Home() {
-  return <div>Hello world!</div>
+import "../styles/index.scss"
+
+const Index = () => {
+  return (
+    <Layout>
+      <Header />
+      <Profile />
+    </Layout>
+  )
 }
+
+export default Index

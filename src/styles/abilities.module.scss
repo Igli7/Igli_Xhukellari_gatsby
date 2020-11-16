@@ -1,0 +1,272 @@
+#abilities {
+    position: relative;
+    background-color: #2B303A;
+    color: white;
+    width: 100vw;
+}
+
+.abilitiesWrapper{
+
+
+    @media (min-width: 840px) { 
+        margin-right: 17%;
+    }
+}
+
+#abilities h2 {
+    color: #00ADBA;
+    padding-top: 2em;
+    padding-bottom: 1em;
+}
+
+#abilities h2::before, #abilities h2::after {
+    content: '';
+    width: 1.35em;
+    height: 0.19rem;
+    background-color: #00ADBA;
+    display: inline-block;
+    z-index: 99;
+}
+
+#abilities h3 {
+    color: white;
+    padding-bottom: 1.5em;
+    font-size: 2em;
+}
+
+#abilities ul {
+    position: relative;
+    list-style: none;
+    padding-left: 1em;
+    padding-right: 25%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    width: 100%;
+}
+
+#abilities ul li {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 1.3em;
+    background-color: rgba(134, 130, 130, 0.3);
+    margin-bottom: 2.5em;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    position: relative;
+    left: 30%;
+    z-index: 1;
+}
+
+#abilities ul li .progLangName {
+    content: '';
+    display: block;
+    height: 100%;
+    background-color: rgba(134, 130, 130, 0.3);
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    width: 30%;
+    left: -30%;
+    position: absolute;
+    top: 0;
+    color: white;
+    text-align: left;
+    font-size: 0.7rem;
+    font-weight: bolder;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 99;
+}
+
+#abilities ul li::before {
+    content: '';
+    color: black;
+    position: absolute;
+    left: 0em;
+    height: 1.3em;
+    background: linear-gradient(to right top, #00adba, #1fc1be, #43d4be, #68e6bb, #90f8b5);
+    width: 0%;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    transition: all 2s;
+    z-index: 9;
+}
+
+.percentage{
+    color: black;
+    position: absolute;
+    top: 0;
+    left: 0em;
+    height: 1.3em;
+    background: linear-gradient(to right top, #00adba, #1fc1be, #43d4be, #68e6bb, #90f8b5);
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    transition: all 2s;
+    z-index: 9;
+}
+
+#abilities ul li p {
+    position: relative;
+    z-index: 10;
+    color: black;
+    text-align: left;
+    width: 100%;
+    font-weight: bolder;
+    font-size: 0.8rem;
+    top: 50%;
+    transform: translate(-10%,-50% );
+    transition: left 2s ease-in-out;
+}
+
+
+@media (min-width: 1000px) {
+    #abilities ul {
+        padding-left: 5em;
+        padding-right: auto;
+    }
+    #abilities ul li {
+        margin-bottom: 3em;
+    }
+}
+
+@media (min-width: 1300px) {
+    #abilities ul {
+        padding-left: auto;
+        padding-right: auto;
+        width: 90%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    #abilities ul li {
+        margin-bottom: 4em;
+    }
+}
+
+/* =============== Languages =============== */
+
+.languages{
+    display: block;
+    text-align: left; 
+    padding-left: 2em; 
+    padding-top: 2.5em;
+}
+
+.languages .lang{
+    padding-bottom: 2.5em;
+    position: relative;
+}
+
+.lang .flag{
+    position:relative;
+    width: 15px;
+    background-size: cover;
+    height: 15px;
+    display: inline-block;
+}
+
+.albanian .flag{
+   // background-image: url(img/Albania1.png);
+}
+.english .flag{
+   // background-image: url(img/usa.jpg);
+}
+.italian .flag{
+    display: inline-block;
+}
+.lang h4{
+    display: inline-block;
+    font-size: 1.5em;
+    padding-left: 0.2em;
+    padding-bottom: 0.8em;
+}
+.lang p{
+
+    font-size: 0.9rem;
+}
+.italian{
+    text-align: left;
+    padding-left: 2em;
+    padding-bottom: 3em;
+}
+.flag, h4{
+    transform: translateY(30px);
+    transition: all 1s;
+}
+.flag.is-visible, h4.is-visible{
+    transform: none;
+}
+
+.languages p{
+    opacity: 0;
+    transition: opacity 1.5s;
+}
+.languages p.is-visible{
+    opacity: 1;
+}
+
+@media (min-width: 700px) {
+.lang h4{
+    font-size: 2em;
+}
+
+.lang{
+    padding-left: 3em;
+}
+.lang p{
+    padding-bottom: 3em;
+    
+}
+.italian{
+    padding-left: 5em;
+}
+}
+
+
+
+@media (min-width: 840px) {
+    .languages{
+        position: relative;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        right: 17%;
+    }
+    .lang h4{
+        font-size: 2.5em;
+    }
+    .lang {
+         padding-top: 20em;
+     }
+
+     .albanian.lang{
+         position: absolute;
+         left: 25%;
+     }
+     .english.lang{
+         position: absolute;
+         right: 4%;
+     }
+     .italian{
+         position: relative;
+         text-align: center;
+         padding-left: 0;
+
+     }
+
+}
+
+@media (min-width: 1000px){
+    .albanian.lang{
+        position: absolute;
+        left: 35%;
+    }
+    .english.lang{
+        position: absolute;
+        right: 11%;
+    }
+}
