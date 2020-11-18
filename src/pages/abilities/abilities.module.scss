@@ -124,6 +124,7 @@
 
 
 @media (min-width: 1000px) {
+    
     #abilities ul {
         padding-left: 5em;
         padding-right: auto;
@@ -150,14 +151,18 @@
 
 .languages{
     display: block;
-    text-align: left; 
-    padding-left: 2em; 
-    padding-top: 2.5em;
+    text-align: center; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
 .languages .lang{
     padding-bottom: 2.5em;
     position: relative;
+    flex: 0 1 250px;
+    margin: 0em 1em;
 }
 
 .lang .flag{
@@ -168,15 +173,7 @@
     display: inline-block;
 }
 
-.albanian .flag{
-   // background-image: url(img/Albania1.png);
-}
-.english .flag{
-   // background-image: url(img/usa.jpg);
-}
-.italian .flag{
-    display: inline-block;
-}
+
 .lang h4{
     display: inline-block;
     font-size: 1.5em;
@@ -187,25 +184,13 @@
 
     font-size: 0.9rem;
 }
-.italian{
-    text-align: left;
-    padding-left: 2em;
-    padding-bottom: 3em;
-}
 .flag, h4{
     transform: translateY(30px);
     transition: all 1s;
 }
-.flag.is-visible, h4.is-visible{
-    transform: none;
-}
-
 .languages p{
-    opacity: 0;
-    transition: opacity 1.5s;
-}
-.languages p.is-visible{
     opacity: 1;
+    padding-top: 1.3em;
 }
 
 @media (min-width: 700px) {
@@ -213,15 +198,8 @@
     font-size: 2em;
 }
 
-.lang{
-    padding-left: 3em;
-}
 .lang p{
     padding-bottom: 3em;
-    
-}
-.italian{
-    padding-left: 5em;
 }
 }
 
@@ -229,44 +207,10 @@
 
 @media (min-width: 840px) {
     .languages{
-        position: relative;
-        text-align: center;
-        display: flex;
-        justify-content: center;
-        align-items: center;
         right: 17%;
     }
     .lang h4{
         font-size: 2.5em;
     }
-    .lang {
-         padding-top: 20em;
-     }
-
-     .albanian.lang{
-         position: absolute;
-         left: 25%;
-     }
-     .english.lang{
-         position: absolute;
-         right: 4%;
-     }
-     .italian{
-         position: relative;
-         text-align: center;
-         padding-left: 0;
-
-     }
-
-}
-
-@media (min-width: 1000px){
-    .albanian.lang{
-        position: absolute;
-        left: 35%;
-    }
-    .english.lang{
-        position: absolute;
-        right: 11%;
-    }
+    
 }

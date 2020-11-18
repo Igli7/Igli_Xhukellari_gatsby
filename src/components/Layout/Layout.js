@@ -1,6 +1,6 @@
 import React from "react"
-import Navbar from "./NavBar"
-import Footer from "./Footer"
+import Navbar from "../Navbar/NavBar"
+import Footer from "../Footer/Footer"
 
 import layoutStyles from "./layout.module.scss"
 

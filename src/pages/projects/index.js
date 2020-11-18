@@ -1,8 +1,8 @@
 import React from "react"
-import projectsStyles from "../styles/projects.module.scss"
+import projectsStyles from "./projects.module.scss"
 import { graphql, useStaticQuery, Link } from "gatsby"
 import Img from "gatsby-image"
-import Layout from "../components/Layout"
+import Layout from "../../components/Layout/Layout"
 
 const Projects = () => {
   const data = useStaticQuery(graphql`
@@ -25,7 +25,7 @@ const Projects = () => {
 
   return (
     <Layout>
-      <div className="projects">
+      <div className={projectsStyles.project}>
         <h2>Projects</h2>
         <div className={projectsStyles.projectWrapper}>
           <div className={projectsStyles.cardContainer}>

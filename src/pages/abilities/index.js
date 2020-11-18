@@ -1,7 +1,8 @@
 import React from "react"
-import Layout from "../components/Layout"
+import Layout from "../../components/Layout/Layout"
 import { graphql, useStaticQuery } from "gatsby"
-import abilitiesStyles from "../styles/abilities.module.scss"
+import Img from "gatsby-image"
+import abilitiesStyles from "./abilities.module.scss"
 
 const Abilities = () => {
   const data = useStaticQuery(graphql`
@@ -17,7 +18,7 @@ const Abilities = () => {
             foreignLanguageLevel
             flagImage {
               fluid {
-                src
+                ...GatsbyContentfulFluid_withWebp
               }
             }
           }
@@ -62,24 +63,25 @@ const Abilities = () => {
               }
             })}
           </ul>
-        </div>
+        
         <h3>Languages</h3>
         <div className={abilitiesStyles.languages}>
-          <div className={abilitiesStyles.lang}>
-            <div class="flag show-on-scroll"></div>
-            <h4>Albanian</h4>
-            <p>- Fluent</p>
-          </div>
-          <div class="english lang ">
-            <div class="flag "></div>
-            <h4>English</h4>
-            <p>- Fluent</p>
-          </div>
+          {data.allContentfulAbilities.edges.map(edge => {
+            if (edge.node.foreignLanguage != null) {
+              return (
+                <div className={abilitiesStyles.lang}>
+                  <div class={abilitiesStyles.flag}>
+                    <Img fluid={edge.node.flagImage.fluid}></Img>
+                  </div>
+                  <h4>{edge.node.foreignLanguage}</h4>
+                  <p>- {edge.node.foreignLanguageLevel}</p>
+                </div>
+              )
+            } else {
+              return null
+            }
+          })}
         </div>
-        <div class="italian lang">
-          <div class="flag"></div>
-          <h4>Italian</h4>
-          <p>- Begginer</p>
         </div>
       </section>
     </Layout>
