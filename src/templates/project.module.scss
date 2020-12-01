@@ -1,0 +1,92 @@
+.project{
+    width: 100vw;
+}
+
+.projectWrapper{
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    max-width: 526px;
+    color: #333333;
+   
+
+    .projectImage{
+        position: relative;
+        width: 100%;
+        height: 300px;
+        background-color: blue;
+
+        .imageWrapper{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+
+            .image{
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+    }
+
+    h1{
+        padding: 1rem;
+        font-size: 2.5rem;
+    }
+
+    .date{
+        padding-bottom: 0.7rem;
+    }
+
+    .description{
+        padding: 1rem 2rem;
+        font-size: 0.9rem;
+    }
+}
+
+
+.buttons{
+    padding: 2rem;
+    position: relative;
+    bottom: 10px;
+    display: flex;
+    justify-content: center;
+    width: 120%;
+    margin-left: -2em;
+    transform: translateZ(2rem);
+}
+
+.buttons .button {
+    padding: 15px 1em;
+    background-color: #575757;
+    border-radius: 5px;
+    margin-left: 1em;
+    display: flex;
+    justify-content: center;
+    color: white;
+    cursor: pointer;
+    transition: background-color 250ms ease;
+    text-decoration: none;
+}
+.buttons .button .icon {
+    width: 21px;
+    height: 21px;
+    margin-right: 7px;
+    background-position: center;
+    background-size: cover;
+}
+
+.buttons .button.netlify{
+    min-width: 111.50px;
+}
+
+
+.buttons .button.github1:hover{
+    background-color: #414141;
+}
+
+.buttons .button.netlify:hover{
+    background-color: #226872;
+}

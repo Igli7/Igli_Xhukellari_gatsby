@@ -3,6 +3,7 @@ import Layout from "../../components/Layout/Layout"
 import { graphql, useStaticQuery } from "gatsby"
 import Img from "gatsby-image"
 import abilitiesStyles from "./abilities.module.scss"
+import Head from "../../components/head/Head"
 
 const Abilities = () => {
   const data = useStaticQuery(graphql`
@@ -29,6 +30,7 @@ const Abilities = () => {
 
   return (
     <Layout>
+      <Head title='Abilities' />
       <section id={abilitiesStyles.abilities}>
         <h2>Abilities</h2>
         <h3>Skills</h3>

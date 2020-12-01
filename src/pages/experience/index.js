@@ -2,6 +2,7 @@ import React from "react"
 import Layout from "../../components/Layout/Layout"
 import { graphql, useStaticQuery } from "gatsby"
 import experienceStyles from "./experience.module.scss"
+import Head from "../../components/head/Head"
 
 const Experience = () => {
   const data = useStaticQuery(graphql`
@@ -24,6 +25,7 @@ const Experience = () => {
 
   return (
     <Layout>
+      <Head title='Experience' />
       <section id={experienceStyles.experience}>
         <div class={experienceStyles.wa1}>
           <h2>Experience</h2>

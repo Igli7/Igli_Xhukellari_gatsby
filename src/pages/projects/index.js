@@ -3,6 +3,7 @@ import projectsStyles from "./projects.module.scss"
 import { graphql, useStaticQuery, Link } from "gatsby"
 import Img from "gatsby-image"
 import Layout from "../../components/Layout/Layout"
+import Head from "../../components/head/Head"
 
 const Projects = () => {
   const data = useStaticQuery(graphql`
@@ -25,6 +26,7 @@ const Projects = () => {
 
   return (
     <Layout>
+      <Head title='Projects' />
       <div className={projectsStyles.project}>
         <h2>Projects</h2>
         <div className={projectsStyles.projectWrapper}>
@@ -33,9 +35,9 @@ const Projects = () => {
               return (
                 <div className={projectsStyles.card}>
                   <div className={projectsStyles.cardContent}>
-                    <h4 className={projectsStyles.cardTitle}>
+                    <h3 className={projectsStyles.cardTitle}>
                       {edge.node.projectName}
-                    </h4>
+                    </h3>
                     <div className={projectsStyles.cardImage}>
                       <Img
                         className={projectsStyles.image}

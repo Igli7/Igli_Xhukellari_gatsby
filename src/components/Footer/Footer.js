@@ -9,16 +9,20 @@ const Footer = () => {
 
   return (
     <Fragment>
-      {location.pathname === "/abilities" ||  location.pathname === "/experience" ? (
-        <footer className={footerStyles.footer} style={{backgroundColor: '#ebebeb'}}>
-          <div style={{color:'#2B303A'}}>
-            <p>&copy; 2020 All Rights Reserved.</p>-<h5>Igli Xhukellari</h5>
+      {location.pathname === "/abilities" ||
+      location.pathname === "/experience" ? (
+        <footer
+          className={footerStyles.footer}
+          style={{ backgroundColor: "#ebebeb" }}
+        >
+          <div style={{ color: "#2B303A" }}>
+            <p>&copy; 2020 All Rights Reserved.</p>-<h3>Igli Xhukellari</h3>
           </div>
         </footer>
       ) : (
         <footer className={footerStyles.footer}>
           <div>
-            <p>&copy; 2020 All Rights Reserved.</p>-<h5>Igli Xhukellari</h5>
+            <p>&copy; 2020 All Rights Reserved.</p>-<h3>Igli Xhukellari</h3>
           </div>
         </footer>
       )}

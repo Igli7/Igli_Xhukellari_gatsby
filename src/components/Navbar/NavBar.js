@@ -19,11 +19,21 @@ const NavBar = () => {
   return (
     <div className={navbarStyles.navbarContainer}>
       <nav>
-        <Link class={navbarStyles.logo} to="/" style={{minHeight:'63px', minWidth:'70px'}}>
-          <Img fluid={data.contentfulNavbar.logo.fluid}></Img>
+        <Link
+          class={navbarStyles.logo}
+          to="/"
+          style={{ minHeight: "63px", minWidth: "70px", fontSize: "0.1px" }}
+        >
+          <Img fluid={data.contentfulNavbar.logo.fluid}></Img>Logo
         </Link>
         <div class={navbarStyles.menuWrap}>
           <input type="checkbox" class={navbarStyles.toggler} id="toggler" />
+          <label
+            htmlFor="toggler"
+            style={{ position: "absolute", fontSize: "0.1px" }}
+          >
+            Menu
+          </label>
           <div class={navbarStyles.hamburger}>
             <div></div>
           </div>
@@ -33,18 +43,13 @@ const NavBar = () => {
               <div>
                 <ul>
                   <li>
-                    <Link
-                      to="/"
-                      id="click2"
-                      activeClassName={navbarStyles.activeNavLink}
-                    >
+                    <Link to="/" activeClassName={navbarStyles.activeNavLink}>
                       <p>Profile</p>
                     </Link>
                   </li>
                   <li>
                     <Link
                       to="/experience"
-                      id="click3"
                       activeClassName={navbarStyles.activeNavLink}
                     >
                       <p>Experience</p>
@@ -53,7 +58,6 @@ const NavBar = () => {
                   <li>
                     <Link
                       to="/projects"
-                      id="click4"
                       activeClassName={navbarStyles.activeNavLink}
                     >
                       <p>Projects</p>
@@ -62,7 +66,6 @@ const NavBar = () => {
                   <li>
                     <Link
                       to="/abilities"
-                      id="click5"
                       activeClassName={navbarStyles.activeNavLink}
                     >
                       <p>Abilities</p>
@@ -70,9 +73,7 @@ const NavBar = () => {
                   </li>
                   <li>
                     <Link
-                      href="/contact"
-                      class="aContact"
-                      id="click6"
+                      to="/contact"
                       activeClassName={navbarStyles.activeNavLink}
                     >
                       <p>Contact</p>
