@@ -59,12 +59,6 @@ module.exports = {
       },
     },
     {
-      resolve: "gatsby-plugin-robots-txt",
-      options: {
-        policy: [{ userAgent: "*", allow: "/" }],
-      },
-    },
-    {
       resolve: "gatsby-plugin-html-attributes",
       options: {
         lang: "en",
